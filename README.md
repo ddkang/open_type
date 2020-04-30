@@ -39,18 +39,25 @@ Project website: https://homes.cs.washington.edu/~eunsol/_site/open_entity.html
 
 ### To train a model:
 
+```
 python3 main.py MODEL_ID -lstm_type single -enhanced_mention -data_setup joint -add_crowd -multitask
+```
 
 To train model on the Ontonotes dataset
+```
 python3 main.py onto -lstm_type single -goal onto  -enhanced_mention
+```
 
 To run predictions of pre-trained model:
+```
 python3 main.py MODEL_ID -lstm_type single -enhanced_mention -data_setup joint -add_crowd -multitask -mode test -reload_model_name MODEL_NAME_TIMESTAMP -eval_data crowd/test.json -load
+```
 
 ### Scorer: 
 
+```
 python3 scrorer.py OUTPUT_FILENAME
-
+```
 
 
 Contact:
